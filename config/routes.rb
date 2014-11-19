@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   
   resources :statics
   
-  resources :dashboard
   root :to => "statics#index"
+  get '/dashboard' => 'statics#dashboard'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
