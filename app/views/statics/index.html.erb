@@ -1,0 +1,56 @@
+<h1><%= @user %> </h1>
+<% ## Education %>
+   <% if @educations.nil? %>
+   <% else %>
+     <% @educations.each do |edu| %>
+       <% if @edu %>
+         <h2>Education</h2>
+         <% @edu = false %>
+       <% end %>
+         <%= edu.school %> | <%= edu.award %><br>
+         <%= edu.location %> | <%= edu.date %><br>
+         <%= edu.description %><br>
+  <% end %>
+  <% end %>
+<% ## Education %>
+
+<% ## Experience %>
+  <% if @experiences.nil? %>
+  <% else %>
+    <% @experiences.each do |exp| %>
+      <% if @exp %>
+        <h2>Work experiences</h2>
+          <% @exp = false %>
+        <% end %>
+          <%= exp.title %> | <%= exp.company %> | <%= exp.date %><br>
+          <%= exp.description %><br>
+  <% end %>
+  <% end %>
+<% ## Experience %>
+
+<% ## Activities %>
+  <% if @activities.nil? %>
+  <% else %>
+    <% @activities.each do |act| %>
+      <% if @act %>
+        <h2>Activities and Projects</h2>
+        <% @act = false %>
+      <% end %>
+    <%= act.date %> | <%= act.title %> | <%= act.description %><br>
+    <% end %>
+  <% end %>
+<% ## Activities %>
+
+<% ## Qualifications %>
+  <% if @qualifications.nil? %>
+  <% else %>
+    <% @qualifications.each do |qual| %>
+      <% if @qual %>
+        <h2>Qualifications</h2>
+        <% @qual = false %>
+      <% end %>
+    <%= qual.description %><br>
+    <% end %>
+  <% end %>
+<% ## Qualifications %>
+
